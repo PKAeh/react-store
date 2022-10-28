@@ -2,10 +2,10 @@ const getProductAll = () => {
   return fetch('https://dummyjson.com/products').then((res) => res.json())
 }
 
-const getCategoryAll = () => {
+const getCategoriesAll = () => {
   return fetch('https://dummyjson.com/products/categories').then((res) =>
     res.json()
   )
 }
 
-export { getProductAll, getCategoryAll }
+export { getProductAll, getCategoriesAll }
