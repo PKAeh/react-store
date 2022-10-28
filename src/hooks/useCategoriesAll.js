@@ -3,15 +3,15 @@ const { getCategoriesAll } = require('../services/productsService')
 
 const useCategoriesAll = () => {
   const {
-    isLoading: productsLoading,
+    isLoading: categoriesLoading,
     data: categories,
-    error: productsError,
+    error: categoriesError,
   } = useQuery(['getData'], getCategoriesAll)
 
   return {
-    productsLoading,
+    categoriesLoading,
     categories,
-    productsError,
+    categoriesError,
   }
 }
 
