@@ -1,5 +1,5 @@
-const { useQuery } = require('@tanstack/react-query')
-const { getProductAll } = require('../services/productsService')
+import { useQuery } from '@tanstack/react-query'
+import { getProductAll } from '../services/productsService'
 
 const useProductsAll = () => {
   const {
