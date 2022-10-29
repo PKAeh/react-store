@@ -11,8 +11,6 @@ import FlashSale from '../components/flashSales/FlashSale'
 const HomePage = () => {
   const { productsLoading, products, productsError } = useProductsAll()
 
-  console.log(products)
-
   if (productsLoading) {
     return <Loading />
   }
