@@ -5,11 +5,16 @@ import useProductsAll from '../hooks/useProductsAll'
 import Grid from '@mui/material/Unstable_Grid2'
 import Container from '@mui/material/Container'
 import ChipList from '../components/ChipList'
+import Loading from '../components/Loading'
 
 const HomePage = () => {
   const { productsLoading, products, productsError } = useProductsAll()
 
   console.log(products)
+
+  if (productsLoading) {
+    return <Loading />
+  }
 
   return (
     <Container>
