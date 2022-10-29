@@ -12,8 +12,8 @@ const FlashSale = ({ products }) => {
       <Typography sx={{ pb: 1 }} variant="h5">
         Flash Sale
       </Typography>
-      <Paper>
-        <Grid container columns={1}>
+      <Paper sx={{ pb: 1 }}>
+        <Grid container columns={1} sx={{ p: 0, m: 0 }}>
           <Grid xs={1}>
             <FlashSaleHeader />
           </Grid>
