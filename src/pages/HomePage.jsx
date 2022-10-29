@@ -6,7 +6,7 @@ import Grid from '@mui/material/Unstable_Grid2'
 import Container from '@mui/material/Container'
 import ChipList from '../components/ChipList'
 import Loading from '../components/Loading'
-import FlashSale from '../components/FlashSale'
+import FlashSale from '../components/flashSales/FlashSale'
 
 const HomePage = () => {
   const { productsLoading, products, productsError } = useProductsAll()
