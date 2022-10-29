@@ -3,6 +3,7 @@ import Grid from '@mui/material/Unstable_Grid2'
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import FlashSaleCountdown from './FlashSaleCountdown'
 
 const FlashSaleHeader = () => {
   return (
@@ -14,8 +15,10 @@ const FlashSaleHeader = () => {
         <Typography sx={{ color: 'red' }}>ขณะนี้ลดราคาอยู่</Typography>
       </Grid>
       <Grid xs={8} sx={{ p: 0 }}>
-        จะสิ้นสุดใน
-        <>Count down Component</>
+        <Box sx={{ display: 'flex', gap: 1 }}>
+          <Typography>จะสิ้นสุดใน</Typography>
+          <FlashSaleCountdown />
+        </Box>
       </Grid>
 
       <Grid xs sx={{ p: 0 }}>
