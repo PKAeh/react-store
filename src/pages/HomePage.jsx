@@ -1,17 +1,19 @@
 import React from 'react'
 import useProductsAll from '../hooks/useProductsAll'
-// import useCategoriesAll  from '../hooks/useCategoriesAll'
+import useCategoriesAll from '../hooks/useCategoriesAll'
 
 import Grid from '@mui/material/Unstable_Grid2'
 import Container from '@mui/material/Container'
 import ChipList from '../components/ChipList'
 import Loading from '../components/Loading'
 import FlashSale from '../components/flashSales/FlashSale'
+import Categories from '../components/categories/Categories'
 
 const HomePage = () => {
   const { productsLoading, products, productsError } = useProductsAll()
+  const { categoriesLoading, categories, categoriesError } = useCategoriesAll()
 
-  if (productsLoading) {
+  if (productsLoading || categoriesLoading) {
     return <Loading />
   }
 
@@ -29,6 +31,10 @@ const HomePage = () => {
         <Grid xs={12}>
           <FlashSale products={products.products} />
         </Grid>
+      </Grid>
+
+      <Grid xs={12}>
+        <Categories />
       </Grid>
     </Container>
   )
