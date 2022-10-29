@@ -6,7 +6,7 @@ import Grid from '@mui/material/Unstable_Grid2'
 import FlashSaleHeader from './FlashSaleHeader'
 import FlashSaleContent from './FlashSaleContent'
 
-const FlashSale = () => {
+const FlashSale = ({ products }) => {
   return (
     <>
       <Typography variant="h5">Flash Sale</Typography>
@@ -16,8 +16,8 @@ const FlashSale = () => {
             <Grid xs={1}>
               <FlashSaleHeader />
             </Grid>
-            <Grid xs={1} sx={{ backgroundColor: 'yellow' }}>
-              <FlashSaleContent />
+            <Grid xs={1}>
+              <FlashSaleContent products={products} />
             </Grid>
           </Grid>
         </CardContent>

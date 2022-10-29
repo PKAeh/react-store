@@ -29,7 +29,7 @@ const HomePage = () => {
         </Grid>
 
         <Grid xs={12}>
-          <FlashSale />
+          <FlashSale products={products.products} />
         </Grid>
       </Grid>
     </Container>
