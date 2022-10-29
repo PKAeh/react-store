@@ -34,7 +34,7 @@ const HomePage = () => {
       </Grid>
 
       <Grid xs={12}>
-        <Categories />
+        <Categories categories={categories} />
       </Grid>
     </Container>
   )
