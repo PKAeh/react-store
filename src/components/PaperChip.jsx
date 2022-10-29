@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 
 const PaperChip = ({ image, title }) => {
+  const [elevation, setElevation] = useState(1)
+
+  const onMouseEnter = () => {
+    setElevation(5)
+  }
+
+  const onMouseLeave = () => {
+    setElevation(1)
+  }
+
   return (
     <Paper
+      elevation={elevation}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       sx={{
         px: 2,
         py: 1,
@@ -13,10 +26,13 @@ const PaperChip = ({ image, title }) => {
         justifyContent: 'start',
         alignItems: 'center',
         gap: 1,
+        cursor: 'pointer',
       }}
     >
       <img src={image} alt="logo" width={25} />
-      <Typography variant="body2">{title}</Typography>
+      <Typography sx={{ fontWeight: 'bold' }} variant="body2">
+        {title}
+      </Typography>
     </Paper>
   )
 }
