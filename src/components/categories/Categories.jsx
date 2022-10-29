@@ -9,10 +9,10 @@ const Categories = ({ categories }) => {
     <>
       <Typography variant="h5">หมวดหมู่</Typography>
       <Paper>
-        <Grid container columns={6} sx={{ py: 0, px: 0, gap: 1 }}>
+        <Grid container columns={7} spacing={0.5}>
           {categories.map((item) => {
             return (
-              <Grid key={item} xs sx={{ px: 0 }}>
+              <Grid key={item} xs={1}>
                 <CategoryItem item={item} />
               </Grid>
             )
