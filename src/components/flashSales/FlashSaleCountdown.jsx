@@ -10,7 +10,6 @@ const FlashSaleCountdown = () => {
       now.getMonth(),
       now.getDate() + 1
     )
-    console.log({ now, timeFlashSale })
 
     const timeCount = (timeFlashSale - now) / 1000
 
