@@ -6,7 +6,7 @@ const useCategoriesAll = () => {
     isLoading: categoriesLoading,
     data: categories,
     error: categoriesError,
-  } = useQuery(['getData'], getCategoriesAll)
+  } = useQuery(['category'], getCategoriesAll)
 
   return {
     categoriesLoading,
