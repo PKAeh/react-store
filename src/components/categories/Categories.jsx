@@ -11,17 +11,16 @@ const Categories = ({ categories }) => {
       <Typography sx={{ pb: 2 }} variant="h5">
         หมวดหมู่
       </Typography>
-      <Paper>
-        <Grid container columns={7} spacing={0.5}>
-          {categories.map((item) => {
-            return (
-              <Grid key={item} xs={1}>
-                <CategoryItem item={item} />
-              </Grid>
-            )
-          })}
-        </Grid>
-      </Paper>
+
+      <Grid container columns={7} spacing={0.5}>
+        {categories.map((item) => {
+          return (
+            <Grid key={item} xs={1}>
+              <CategoryItem item={item} />
+            </Grid>
+          )
+        })}
+      </Grid>
     </Box>
   )
 }
