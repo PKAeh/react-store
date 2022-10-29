@@ -11,7 +11,7 @@ const FlashSale = () => {
     <>
       <Typography variant="h5">Flash Sale</Typography>
       <Card>
-        <CardContent>
+        <CardContent sx={{ p: 0 }}>
           <Grid container columns={1}>
             <Grid xs={1}>
               <FlashSaleHeader />

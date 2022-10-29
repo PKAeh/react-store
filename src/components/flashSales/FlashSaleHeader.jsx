@@ -15,7 +15,7 @@ const FlashSaleHeader = () => {
         <Typography sx={{ color: 'red' }}>ขณะนี้ลดราคาอยู่</Typography>
       </Grid>
       <Grid xs={8} sx={{ p: 0 }}>
-        <Box sx={{ display: 'flex', gap: 1 }}>
+        <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
           <Typography>จะสิ้นสุดใน</Typography>
           <FlashSaleCountdown />
         </Box>
