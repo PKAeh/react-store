@@ -9,7 +9,7 @@ const FlashSaleContent = ({ products }) => {
     <Grid container columns={6} sx={{ py: 0, px: 0, gap: 1 }}>
       {productList.map((product) => {
         return (
-          <Grid xs sx={{ px: 0 }}>
+          <Grid key={product.id} xs sx={{ px: 0 }}>
             <FlashSaleItem product={product} />
           </Grid>
         )
