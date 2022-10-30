@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Unstable_Grid2'
-import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import ImageCover from './ImageCover'
 
 const ProductItem = ({
   product: { thumbnail, title, price, discountPercentage },
 }) => {
-  const image = `url(${thumbnail})`
   const priceText = price - (price * discountPercentage) / 100
 
   const [elevation, setElevation] = useState(1)
