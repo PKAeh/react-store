@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Unstable_Grid2'
 import Typography from '@mui/material/Typography'
-import ImageCover from './ImageCover'
+import ProductImage from './ProductImage'
 
 const ProductItem = ({
-  product: { thumbnail, title, price, discountPercentage },
+  product: { thumbnail, title, price, discountPercentage, images },
 }) => {
   const priceText = price - (price * discountPercentage) / 100
 
@@ -28,7 +28,7 @@ const ProductItem = ({
     >
       <Grid container sx={{ width: '100%', m: 0, p: 0 }} columns={1}>
         <Grid xs={1} sx={{ width: '100%', p: 0 }}>
-          <ImageCover width={'100%'} height={'180px'} image={thumbnail} />
+          <ProductImage thumbnail={thumbnail} images={images} />
         </Grid>
 
         <Grid xs={1}>
