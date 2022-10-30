@@ -1,9 +1,9 @@
 import React from 'react'
-import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Unstable_Grid2'
 import CategoryItem from './CategoryItem'
 import Box from '@mui/material/Box'
+import { Link } from 'react-router-dom'
 
 const Categories = ({ categories }) => {
   return (
@@ -16,7 +16,9 @@ const Categories = ({ categories }) => {
         {categories.map((item) => {
           return (
             <Grid key={item} xs={1}>
-              <CategoryItem item={item} />
+              <Link style={{ textDecoration: 'none' }} to={`/category/${item}`}>
+                <CategoryItem item={item} />
+              </Link>
             </Grid>
           )
         })}
