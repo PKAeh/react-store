@@ -3,6 +3,7 @@ import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Unstable_Grid2'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import ImageCover from './ImageCover'
 
 const ProductItem = ({
   product: { thumbnail, title, price, discountPercentage },
@@ -29,14 +30,7 @@ const ProductItem = ({
     >
       <Grid container sx={{ width: '100%', m: 0, p: 0 }} columns={1}>
         <Grid xs={1} sx={{ width: '100%', p: 0 }}>
-          <Box
-            sx={{
-              backgroundImage: image,
-              width: '100%',
-              height: '180px',
-              backgroundSize: 'cover',
-            }}
-          ></Box>
+          <ImageCover width={'100%'} height={'180px'} image={thumbnail} />
         </Grid>
 
         <Grid xs={1}>
