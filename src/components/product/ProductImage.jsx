@@ -23,8 +23,12 @@ const ProductImage = ({ thumbnail, images }) => {
       <Grid container sx={{ m: 0, gap: 0.5 }}>
         {images.map((path) => {
           return (
-            <Box onMouseEnter={onMouseEnter(path)} onMouseLeave={onMouseLeave}>
-              <ProductImageItem key={path} path={path} />
+            <Box
+              key={path}
+              onMouseEnter={onMouseEnter(path)}
+              onMouseLeave={onMouseLeave}
+            >
+              <ProductImageItem path={path} />
             </Box>
           )
         })}
