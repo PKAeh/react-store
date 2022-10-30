@@ -8,13 +8,13 @@ const getCategoriesAll = () => {
   )
 }
 
-const getProductCategory = (skip = 0, limit = 20) => {
+const getProductCategory = (category, skip, limit) => () => {
   return fetch(
-    `https://dummyjson.com/products/category/smartphones?skip=${skip}&limit=${limit}`
+    `https://dummyjson.com/products/category/${category}?skip=${skip}&limit=${limit}`
   ).then((res) => res.json())
 }
 
-const getProductSearch = (skip = 0, limit = 20, keyword) => {
+const getProductSearch = (keyword, skip, limit) => () => {
   return fetch(
     `https://dummyjson.com/products/search?q=${keyword}&skip=${skip}&limit=${limit}`
   ).then((res) => res.json())
