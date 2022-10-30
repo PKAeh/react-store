@@ -4,20 +4,20 @@ import Grid from '@mui/material/Unstable_Grid2'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
-const FlashSaleItem = ({
+const ProductItem = ({
   product: { thumbnail, title, price, discountPercentage },
 }) => {
   const image = `url(${thumbnail})`
   const priceText = price - (price * discountPercentage) / 100
 
-  const [elevation, setElevation] = useState(0)
+  const [elevation, setElevation] = useState(1)
 
   const onMouseEnter = () => {
     setElevation(5)
   }
 
   const onMouseLeave = () => {
-    setElevation(0)
+    setElevation(1)
   }
 
   return (
@@ -25,7 +25,7 @@ const FlashSaleItem = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       elevation={elevation}
-      sx={{ width: '100%', height: '280px', cursor: 'pointer' }}
+      sx={{ width: '98%', height: '350px', cursor: 'pointer' }}
     >
       <Grid container sx={{ width: '100%', m: 0, p: 0 }} columns={1}>
         <Grid xs={1} sx={{ width: '100%', p: 0 }}>
@@ -33,7 +33,7 @@ const FlashSaleItem = ({
             sx={{
               backgroundImage: image,
               width: '100%',
-              height: '150px',
+              height: '180px',
               backgroundSize: 'cover',
             }}
           ></Box>
@@ -68,4 +68,4 @@ const FlashSaleItem = ({
   )
 }
 
-export default FlashSaleItem
+export default ProductItem
