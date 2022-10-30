@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import HomePage from './pages/HomePage'
 import Navbar from './components/Navbar'
+import CategoryPage from './pages/CategoryPage'
+import SearchPage from './pages/SearchPage'
 
 const queryClient = new QueryClient()
 
@@ -17,6 +19,14 @@ function App() {
         <Switch>
           <Route exact path="/">
             <HomePage />
+          </Route>
+
+          <Route path="/category/:category">
+            <CategoryPage />
+          </Route>
+
+          <Route path="/search/:search">
+            <SearchPage />
           </Route>
         </Switch>
       </Router>
