@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Grid from '@mui/material/Unstable_Grid2'
 import ImageCover from './ImageCover'
+import ProductImageItem from './ProductImageItem'
+import Box from '@mui/material/Box'
 
 const ProductImage = ({ thumbnail, images }) => {
   const [thumbnailImage, setThumbnailImage] = useState(thumbnail)
@@ -16,18 +18,14 @@ const ProductImage = ({ thumbnail, images }) => {
   return (
     <Grid container>
       <Grid sx={{ width: '100%', p: 0 }}>
-        <ImageCover width={'100%'} height={'180px'} image={thumbnailImage} />
+        <ImageCover width={'100%'} height={'200px'} image={thumbnailImage} />
       </Grid>
-      <Grid container>
+      <Grid container sx={{ m: 0, gap: 0.5 }}>
         {images.map((path) => {
           return (
-            <Grid
-              key={path}
-              onMouseEnter={onMouseEnter(path)}
-              onMouseLeave={onMouseLeave}
-            >
-              <ImageCover width={'30px'} height={'30px'} image={path} />
-            </Grid>
+            <Box onMouseEnter={onMouseEnter(path)} onMouseLeave={onMouseLeave}>
+              <ProductImageItem key={path} path={path} />
+            </Box>
           )
         })}
       </Grid>

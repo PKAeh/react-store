@@ -24,7 +24,7 @@ const ProductItem = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       elevation={elevation}
-      sx={{ width: '98%', height: '350px', cursor: 'pointer' }}
+      sx={{ width: '98%', height: '380px', cursor: 'pointer' }}
     >
       <Grid container sx={{ width: '100%', m: 0, p: 0 }} columns={1}>
         <Grid xs={1} sx={{ width: '100%', p: 0 }}>
