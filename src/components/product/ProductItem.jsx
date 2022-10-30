@@ -32,13 +32,17 @@ const ProductItem = ({
         </Grid>
 
         <Grid xs={1}>
-          <Typography sx={{ fontWeight: 'bold' }}>{title}</Typography>
+          <Typography sx={{ fontWeight: 'bold', height: '2em' }}>
+            {title}
+          </Typography>
         </Grid>
+
         <Grid xs={1}>
           <Typography sx={{ color: 'red' }}>{`฿${priceText.toFixed(
             2
           )}`}</Typography>
         </Grid>
+
         <Grid container>
           <Grid sx={{ py: 0 }}>
             <Typography
