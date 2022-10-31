@@ -3,11 +3,14 @@ import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Unstable_Grid2'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import ImageCover from '../product/ImageCover'
 
 const FlashSaleItem = ({
+  width,
+  height,
+  imageHeight,
   product: { thumbnail, title, price, discountPercentage },
 }) => {
-  const image = `url(${thumbnail})`
   const priceText = price - (price * discountPercentage) / 100
 
   const [elevation, setElevation] = useState(0)
@@ -25,18 +28,11 @@ const FlashSaleItem = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       elevation={elevation}
-      sx={{ width: '100%', height: '280px', cursor: 'pointer' }}
+      sx={{ width: width, height: height, cursor: 'pointer' }}
     >
       <Grid container sx={{ width: '100%', m: 0, p: 0 }} columns={1}>
         <Grid xs={1} sx={{ width: '100%', p: 0 }}>
-          <Box
-            sx={{
-              backgroundImage: image,
-              width: '100%',
-              height: '150px',
-              backgroundSize: 'cover',
-            }}
-          ></Box>
+          <ImageCover width={'100%'} height={imageHeight} image={thumbnail} />
         </Grid>
 
         <Grid xs={1}>

@@ -10,7 +10,12 @@ const FlashSaleContent = ({ products }) => {
       {productList.map((product) => {
         return (
           <Grid key={product.id} xs sx={{ px: 0 }}>
-            <FlashSaleItem product={product} />
+            <FlashSaleItem
+              width={'100%'}
+              height={'280px'}
+              imageHeight={'150px'}
+              product={product}
+            />
           </Grid>
         )
       })}
