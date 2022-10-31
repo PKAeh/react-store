@@ -11,7 +11,7 @@ import AdbIcon from '@mui/icons-material/Adb'
 import SearchIcon from '@mui/icons-material/Search'
 import { styled, alpha } from '@mui/material/styles'
 import InputBase from '@mui/material/InputBase'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -56,12 +56,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }))
 
 function Navbar() {
+  const { search } = useLocation()
+  const param = new URLSearchParams(search)
+  const keyword = param.get('q') ?? ''
+
   const history = useHistory()
   const onKeyDown = ({ key, target: { value } }) => {
     // console.log({ key, value })
 
     if (key === 'Enter' && value.length > 0) {
       history.push(`/search?q=${value}`)
+      history.go(0)
     }
   }
 
@@ -127,6 +132,7 @@ function Navbar() {
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
+                defaultValue={keyword}
                 onKeyDown={onKeyDown}
                 placeholder="Search…"
                 inputProps={{ 'aria-label': 'search' }}
