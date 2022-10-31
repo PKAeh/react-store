@@ -25,7 +25,7 @@ function App() {
             <CategoryPage />
           </Route>
 
-          <Route path="/search/:search">
+          <Route path="/search">
             <SearchPage />
           </Route>
         </Switch>
