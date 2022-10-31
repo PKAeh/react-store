@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage'
 import Navbar from './components/Navbar'
 import CategoryPage from './pages/CategoryPage'
 import SearchPage from './pages/SearchPage'
+import ProductAllPage from './pages/ProductAllPage'
 
 const queryClient = new QueryClient()
 
@@ -27,6 +28,10 @@ function App() {
 
           <Route path="/search">
             <SearchPage />
+          </Route>
+
+          <Route path="/shop_all">
+            <ProductAllPage />
           </Route>
         </Switch>
       </Router>
