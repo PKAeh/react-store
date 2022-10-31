@@ -20,7 +20,7 @@ const ProductAllPage = () => {
     <>
       <ProductAllHeader />
       <Container>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{ py: 1, pb: 20 }}>
           <Grid xs={12}>
             <ProductAllContent products={products.products} />
           </Grid>
