@@ -9,7 +9,7 @@ import Container from '@mui/material/Container'
 
 const ProductAllHeader = () => {
   return (
-    <Paper sx={{ p: 2, position: 'sticky' }}>
+    <Paper sx={{ p: 2, position: 'fixed' }}>
       <Container>
         <Grid
           container
