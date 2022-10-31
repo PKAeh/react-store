@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 
-import { getProductSearch } from '../services/getProductSearch'
+import { getProductSearch } from '../services/productsService'
 
 const useProductSearch = (keyword, skip = 0, limit = 20) => {
   const {
