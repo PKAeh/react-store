@@ -17,7 +17,7 @@ const ProductDetailName = ({
       <Grid xs={1} sx={{ pb: 2 }}>
         <ProductRating rating={rating} />
       </Grid>
-      <Grid sx={{ pb: 5 }}>
+      <Grid xs={1} sx={{ pb: 5 }}>
         <ProductDetailBrand brand={brand} title={title} />
       </Grid>
       <Grid
@@ -35,8 +35,39 @@ const ProductDetailName = ({
           variant={'h3'}
         />
       </Grid>
-      <Grid sx={{ mt: 2 }}>
+      <Grid xs={1} sx={{ mt: 2 }}>
         <ProductTotalSell stock={stock} />
+      </Grid>
+
+      <Grid
+        container
+        sx={{ height: '50px', color: 'white', cursor: 'pointer' }}
+      >
+        <Grid
+          container
+          sx={{
+            width: '232px',
+            bgcolor: '#feb916',
+            alignItems: 'center',
+            mr: 2,
+          }}
+        >
+          <Typography sx={{ width: '100%', textAlign: 'center' }}>
+            ซื้อเลย
+          </Typography>
+        </Grid>
+        <Grid
+          container
+          sx={{
+            width: '232px',
+            bgcolor: '#f57224',
+            alignItems: 'center',
+          }}
+        >
+          <Typography sx={{ width: '100%', textAlign: 'center' }}>
+            เพิ่มลงรถเข็น
+          </Typography>
+        </Grid>
       </Grid>
     </Grid>
   )
