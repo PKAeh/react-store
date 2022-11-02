@@ -3,6 +3,7 @@ import Grid from '@mui/material/Unstable_Grid2'
 import Typography from '@mui/material/Typography'
 import ProductRating from './ProductRating'
 import ProductDetailBrand from './ProductDetailBrand'
+import ProductPrice from './ProductPrice'
 
 const ProductDetailName = ({
   product: { title, rating, brand, price, discountPercentage },
@@ -15,10 +16,24 @@ const ProductDetailName = ({
       <Grid xs={1} sx={{ pb: 2 }}>
         <ProductRating rating={rating} />
       </Grid>
-      <Grid>
+      <Grid sx={{ pb: 5 }}>
         <ProductDetailBrand brand={brand} title={title} />
       </Grid>
-      <Grid></Grid>
+      <Grid
+        xs={1}
+        sx={{
+          borderTop: '1px solid rgba(0,0,0,0.1)',
+          borderBottom: '1px solid rgba(0,0,0,0.1)',
+          py: 3,
+        }}
+      >
+        <ProductPrice
+          price={price}
+          discountPercentage={discountPercentage}
+          fontSize={'15px'}
+          variant={'h3'}
+        />
+      </Grid>
     </Grid>
   )
 }
