@@ -20,4 +20,14 @@ const getProductSearch = (keyword, skip, limit) => () => {
   ).then((res) => res.json())
 }
 
-export { getProductAll, getCategoriesAll, getProductCategory, getProductSearch }
+const getProductDetail = (id) => () => {
+  return fetch(`https://dummyjson.com/products/${id}`).then((res) => res.json())
+}
+
+export {
+  getProductAll,
+  getCategoriesAll,
+  getProductCategory,
+  getProductSearch,
+  getProductDetail,
+}
