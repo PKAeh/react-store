@@ -28,7 +28,7 @@ const ProductImage = ({ thumbnail, images }) => {
               onMouseEnter={onMouseEnter(path)}
               onMouseLeave={onMouseLeave}
             >
-              <ProductImageItem path={path} />
+              <ProductImageItem path={path} width={'35px'} height={'35px'} />
             </Box>
           )
         })}
