@@ -33,6 +33,8 @@ function ProductTotalCount({ stock }) {
             />
           }
           stock={stock}
+          count={count}
+          name={'minus'}
         />
       </Grid>
       <Grid
@@ -57,6 +59,8 @@ function ProductTotalCount({ stock }) {
             />
           }
           stock={stock}
+          count={count}
+          name={'plus'}
         />
       </Grid>
     </Grid>
