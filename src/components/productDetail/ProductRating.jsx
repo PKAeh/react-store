@@ -29,7 +29,7 @@ const ProductRating = ({ rating }) => {
             textAlign: 'end',
           }}
         >
-          3133 คะแนน
+          {rating}
         </Typography>
       </Grid>
       <Grid
