@@ -12,12 +12,12 @@ const ProductTotalSell = ({ stock }) => {
       <Grid>
         <Typography sx={{ color: 'rgba(0,0,0,0.5)', mr: 8 }}>จำนวน</Typography>
       </Grid>
-      <Grid container>
+      <Grid container sx={{ pr: 2 }}>
         <Grid>
           <ProductTotalCount stock={stock} />
         </Grid>
       </Grid>
-      <Grid sx={{ pl: 2 }}>
+      <Grid>
         <Typography variant="caption" sx={{ color: 'rgba(0,0,0,0.5)' }}>
           <ProductStock stock={stock} />
         </Typography>
