@@ -11,7 +11,7 @@ const ProductDetailHeader = ({ product }) => {
       <Grid xs>
         <ProductDetailImage product={product} />
       </Grid>
-      <Grid xs={5}>
+      <Grid xs={5} sx={{ ml: 2 }}>
         <ProductDetailName product={product} />
       </Grid>
       <Grid xs>

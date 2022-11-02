@@ -12,7 +12,7 @@ const ProductPrice = ({ price, discountPercentage, fontSize, variant }) => {
           sx={{ color: 'rgba(253, 0, 4, 0.7)' }}
         >{`฿${priceText.toFixed(2)}`}</Typography>
       </Grid>
-      <Grid container>
+      <Grid container sx={{ ml: 0.4 }}>
         <Grid sx={{ py: 0, pr: 1 }}>
           <Typography
             sx={{

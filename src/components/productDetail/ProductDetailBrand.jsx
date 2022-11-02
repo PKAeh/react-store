@@ -11,6 +11,7 @@ const ProductDetailBrand = ({ brand, title }) => {
             fontSize: '0.7em',
             color: 'rgba(0,0,0,0.4)',
             fontWeight: 'bold',
+            ml: 0.4,
           }}
         >
           Brand :

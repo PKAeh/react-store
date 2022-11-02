@@ -35,7 +35,7 @@ const ProductDetailName = ({
           variant={'h3'}
         />
       </Grid>
-      <Grid>
+      <Grid sx={{ mt: 2 }}>
         <ProductTotalSell stock={stock} />
       </Grid>
     </Grid>
