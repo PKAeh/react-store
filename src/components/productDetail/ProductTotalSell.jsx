@@ -14,7 +14,7 @@ const ProductTotalSell = ({ stock }) => {
       </Grid>
       <Grid container>
         <Grid>
-          <ProductTotalCount />
+          <ProductTotalCount stock={stock} />
         </Grid>
       </Grid>
       <Grid sx={{ pl: 2 }}>

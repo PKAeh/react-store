@@ -1,29 +1,35 @@
 import React from 'react'
 
-import Button from '@mui/material/Button'
 import Grid from '@mui/material/Unstable_Grid2'
 import Typography from '@mui/material/Typography'
 import HorizontalRule from '@mui/icons-material/HorizontalRule'
 import Add from '@mui/icons-material/Add'
+import ProductButtonPlusMinus from './ProductButtonPlusMinus'
 
-function ProductTotalCount() {
+function ProductTotalCount({ stock }) {
+  console.log(stock)
+  let stockItem = 1
+
+  const onClick = () => {
+    if (stockItem < stock) {
+      return stockItem++
+    }
+    console.log(stockItem)
+  }
+
   return (
     <Grid container sx={{ alignItems: 'center' }}>
-      <Grid
-        container
-        sx={{
-          width: '32px',
-          height: '32px',
-          backgroundColor: 'rgb(239, 240, 245)',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <HorizontalRule
-          sx={{
-            width: '15px',
-            height: '24px',
-          }}
+      <Grid onClick={onClick}>
+        <ProductButtonPlusMinus
+          icon={
+            <HorizontalRule
+              sx={{
+                width: '15px',
+                height: '24px',
+              }}
+            />
+          }
+          stock={stock}
         />
       </Grid>
       <Grid
@@ -35,24 +41,22 @@ function ProductTotalCount() {
           justifyContent: 'center',
         }}
       >
-        <Typography>1</Typography>
+        <Typography>{stockItem}</Typography>
       </Grid>
-      <Grid
-        container
-        sx={{
-          width: '32px',
-          height: '32px',
-          backgroundColor: 'rgb(239, 240, 245)',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <Add
-          sx={{
-            width: '18px',
-            height: '24px',
-          }}
-        />
+      <Grid>
+        <Grid>
+          <ProductButtonPlusMinus
+            icon={
+              <Add
+                sx={{
+                  width: '15px',
+                  height: '24px',
+                }}
+              />
+            }
+            stock={stock}
+          />
+        </Grid>
       </Grid>
     </Grid>
   )
