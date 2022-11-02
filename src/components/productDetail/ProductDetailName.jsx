@@ -4,9 +4,10 @@ import Typography from '@mui/material/Typography'
 import ProductRating from './ProductRating'
 import ProductDetailBrand from './ProductDetailBrand'
 import ProductPrice from './ProductPrice'
+import ProductTotalSell from './ProductTotalSell'
 
 const ProductDetailName = ({
-  product: { title, rating, brand, price, discountPercentage },
+  product: { title, rating, brand, price, discountPercentage, stock },
 }) => {
   return (
     <Grid container columns={1}>
@@ -33,6 +34,9 @@ const ProductDetailName = ({
           fontSize={'15px'}
           variant={'h3'}
         />
+      </Grid>
+      <Grid>
+        <ProductTotalSell stock={stock} />
       </Grid>
     </Grid>
   )
