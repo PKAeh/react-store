@@ -17,14 +17,26 @@ const ProductDetailBrand = ({ brand, title }) => {
         </Typography>
       </Grid>
       <Grid sx={{ pr: 1 }}>
-        <Typography sx={{ fontSize: '0.7em', color: 'rgb(51, 163, 191)' }}>
+        <Typography
+          sx={{
+            fontSize: '0.7em',
+            color: 'rgb(51, 163, 191)',
+            cursor: 'pointer',
+          }}
+        >
           {brand}
         </Typography>
       </Grid>
       <Grid
         sx={{ pl: 1, borderLeft: '1px solid rgba(0,0,0,0.3)', height: '15px' }}
       >
-        <Typography sx={{ fontSize: '0.7em', color: 'rgb(51, 163, 191)' }}>
+        <Typography
+          sx={{
+            fontSize: '0.7em',
+            color: 'rgb(51, 163, 191)',
+            cursor: 'pointer',
+          }}
+        >
           เพิ่มเติม {title} จาก {brand}
         </Typography>
       </Grid>

@@ -27,6 +27,7 @@ const ProductRating = ({ rating }) => {
             color: 'rgb(51, 163, 191)',
             fontSize: '0.7em',
             textAlign: 'end',
+            cursor: 'pointer',
           }}
         >
           {rating}
@@ -41,7 +42,13 @@ const ProductRating = ({ rating }) => {
         }}
       ></Grid>
       <Grid sx={{ pl: 1 }}>
-        <Typography sx={{ color: 'rgb(51, 163, 191)', fontSize: '0.7em' }}>
+        <Typography
+          sx={{
+            color: 'rgb(51, 163, 191)',
+            fontSize: '0.7em',
+            cursor: 'pointer',
+          }}
+        >
           คำถาม 0 ได้รับการตอบ
         </Typography>
       </Grid>
