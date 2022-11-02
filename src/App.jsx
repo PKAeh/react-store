@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import CategoryPage from './pages/CategoryPage'
 import SearchPage from './pages/SearchPage'
 import ProductAllPage from './pages/ProductAllPage'
+import ProductDetailPage from './pages/ProductDetailPage'
 
 const queryClient = new QueryClient()
 
@@ -32,6 +33,10 @@ function App() {
 
           <Route path="/shop_all">
             <ProductAllPage />
+          </Route>
+
+          <Route path="/product/:id">
+            <ProductDetailPage />
           </Route>
         </Switch>
       </Router>
