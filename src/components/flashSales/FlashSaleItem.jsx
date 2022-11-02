@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Unstable_Grid2'
-import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import ImageCover from '../product/ImageCover'
 import { Link } from 'react-router-dom'
