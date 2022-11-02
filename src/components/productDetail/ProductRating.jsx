@@ -5,7 +5,7 @@ import Rating from '@mui/material/Rating'
 
 const ProductRating = ({ rating }) => {
   return (
-    <Grid container sx={{ height: '50px', alignItems: 'center' }}>
+    <Grid container sx={{ alignItems: 'center' }}>
       <Grid
         container
         sx={{
@@ -18,19 +18,29 @@ const ProductRating = ({ rating }) => {
           precision={0.5}
           readOnly
           size="small"
+          sx={{ pb: 0.4 }}
         />
       </Grid>
-      <Grid
-        sx={{
-          borderRight: '1px solid rgba(0,0,0,0.5)',
-          pr: 1,
-        }}
-      >
-        <Typography sx={{ color: 'rgb(51, 163, 191)', fontSize: '0.7em' }}>
+      <Grid container>
+        <Typography
+          sx={{
+            color: 'rgb(51, 163, 191)',
+            fontSize: '0.7em',
+            textAlign: 'end',
+          }}
+        >
           3133 คะแนน
         </Typography>
       </Grid>
-      <Grid container sx={{ pl: 1, height: '18px', alignItems: 'center' }}>
+      <Grid
+        container
+        sx={{
+          borderRight: '1px solid rgba(0,0,0,0.5)',
+          pr: 1,
+          height: '13px',
+        }}
+      ></Grid>
+      <Grid sx={{ pl: 1 }}>
         <Typography sx={{ color: 'rgb(51, 163, 191)', fontSize: '0.7em' }}>
           คำถาม 0 ได้รับการตอบ
         </Typography>
