@@ -8,16 +8,16 @@ const ProductTotalSell = ({ stock }) => {
   if (stock) {
   }
   return (
-    <Grid container>
+    <Grid container sx={{ alignItems: 'center' }}>
       <Grid>
-        <Typography sx={{ color: 'rgba(0,0,0,0.5)' }}>จำนวน</Typography>
+        <Typography sx={{ color: 'rgba(0,0,0,0.5)', mr: 8 }}>จำนวน</Typography>
       </Grid>
       <Grid container>
         <Grid>
           <ProductTotalCount />
         </Grid>
       </Grid>
-      <Grid>
+      <Grid sx={{ pl: 2 }}>
         <Typography variant="caption" sx={{ color: 'rgba(0,0,0,0.5)' }}>
           <ProductStock stock={stock} />
         </Typography>
