@@ -1,0 +1,42 @@
+import React from 'react'
+import Grid from '@mui/material/Unstable_Grid2'
+import Typography from '@mui/material/Typography'
+import Rating from '@mui/material/Rating'
+
+const ProductRating = ({ rating }) => {
+  return (
+    <Grid container sx={{ height: '50px', alignItems: 'center' }}>
+      <Grid
+        container
+        sx={{
+          pr: 1,
+        }}
+      >
+        <Rating
+          name="half-rating-read"
+          value={rating}
+          precision={0.5}
+          readOnly
+          size="small"
+        />
+      </Grid>
+      <Grid
+        sx={{
+          borderRight: '1px solid rgba(0,0,0,0.5)',
+          pr: 1,
+        }}
+      >
+        <Typography sx={{ color: 'rgb(51, 163, 191)', fontSize: '0.7em' }}>
+          3133 คะแนน
+        </Typography>
+      </Grid>
+      <Grid container sx={{ pl: 1, height: '18px', alignItems: 'center' }}>
+        <Typography sx={{ color: 'rgb(51, 163, 191)', fontSize: '0.7em' }}>
+          คำถาม 0 ได้รับการตอบ
+        </Typography>
+      </Grid>
+    </Grid>
+  )
+}
+
+export default ProductRating
