@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Grid from '@mui/material/Unstable_Grid2'
 import Typography from '@mui/material/Typography'
@@ -7,19 +7,22 @@ import Add from '@mui/icons-material/Add'
 import ProductButtonPlusMinus from './ProductButtonPlusMinus'
 
 function ProductTotalCount({ stock }) {
-  console.log(stock)
-  let stockItem = 1
+  const [count, setCount] = useState(1)
 
-  const onClick = () => {
-    if (stockItem < stock) {
-      return stockItem++
+  const onClickPlus = () => {
+    if (count < stock) {
+      return setCount(count + 1)
     }
-    console.log(stockItem)
+  }
+  const onClickMinus = () => {
+    if (count > 1) {
+      return setCount(count - 1)
+    }
   }
 
   return (
     <Grid container sx={{ alignItems: 'center' }}>
-      <Grid onClick={onClick}>
+      <Grid onClick={onClickMinus}>
         <ProductButtonPlusMinus
           icon={
             <HorizontalRule
@@ -41,22 +44,20 @@ function ProductTotalCount({ stock }) {
           justifyContent: 'center',
         }}
       >
-        <Typography>{stockItem}</Typography>
+        <Typography>{count}</Typography>
       </Grid>
-      <Grid>
-        <Grid>
-          <ProductButtonPlusMinus
-            icon={
-              <Add
-                sx={{
-                  width: '15px',
-                  height: '24px',
-                }}
-              />
-            }
-            stock={stock}
-          />
-        </Grid>
+      <Grid onClick={onClickPlus}>
+        <ProductButtonPlusMinus
+          icon={
+            <Add
+              sx={{
+                width: '15px',
+                height: '24px',
+              }}
+            />
+          }
+          stock={stock}
+        />
       </Grid>
     </Grid>
   )
