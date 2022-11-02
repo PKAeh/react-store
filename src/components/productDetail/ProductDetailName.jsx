@@ -10,7 +10,7 @@ const ProductDetailName = ({
   return (
     <Grid container columns={1}>
       <Grid xs={1} sx={{ pb: 5 }}>
-        <Typography>{title}</Typography>
+        <Typography variant="h4">{title}</Typography>
       </Grid>
       <Grid xs={1} sx={{ pb: 2 }}>
         <ProductRating rating={rating} />
