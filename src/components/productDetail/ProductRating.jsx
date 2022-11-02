@@ -35,7 +35,7 @@ const ProductRating = ({ rating }) => {
       <Grid
         container
         sx={{
-          borderRight: '1px solid rgba(0,0,0,0.5)',
+          borderRight: '1px solid rgba(0,0,0,0.3)',
           pr: 1,
           height: '13px',
         }}
