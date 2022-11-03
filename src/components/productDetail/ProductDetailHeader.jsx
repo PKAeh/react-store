@@ -8,7 +8,7 @@ import Paper from '@mui/material/Paper'
 
 const ProductDetailHeader = ({ product }) => {
   return (
-    <Paper sx={{ p: 1, pb: 10 }}>
+    <Paper sx={{ p: 1, pb: 7 }}>
       <Grid container xs={12}>
         <Grid xs>
           <ProductDetailImage product={product} />
