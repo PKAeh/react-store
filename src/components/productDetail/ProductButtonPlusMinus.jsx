@@ -7,7 +7,6 @@ const ProductButtonPlusMinus = ({ icon, stock, count, name }) => {
     cursor: 'pointer',
   })
 
-  console.log(stock)
   const onMouseEnter = () => {
     if ((count > 1 && name === 'minus') || (count < stock && name === 'plus'))
       setBgColorAndCursor((state) => {
