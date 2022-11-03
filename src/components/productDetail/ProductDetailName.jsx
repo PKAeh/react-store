@@ -5,6 +5,7 @@ import ProductRating from './ProductRating'
 import ProductDetailBrand from './ProductDetailBrand'
 import ProductPrice from './ProductPrice'
 import ProductTotalSell from './ProductTotalSell'
+import ProductActionButton from './ProductActionButton'
 
 const ProductDetailName = ({
   product: { title, rating, brand, price, discountPercentage, stock },
@@ -41,32 +42,27 @@ const ProductDetailName = ({
 
       <Grid
         container
-        sx={{ height: '50px', color: 'white', cursor: 'pointer' }}
+        columns={1}
+        xs={12}
+        sx={{
+          color: 'white',
+          cursor: 'pointer',
+          mt: 2.5,
+        }}
       >
-        <Grid
-          container
-          sx={{
-            width: '232px',
-            bgcolor: '#feb916',
-            alignItems: 'center',
-            mr: 2,
-          }}
-        >
-          <Typography sx={{ width: '100%', textAlign: 'center' }}>
-            ซื้อเลย
-          </Typography>
+        <Grid xs>
+          <ProductActionButton
+            bgColor={'#ffb916'}
+            text={'ซื้อเลย'}
+            hoverBgColor={'#e59b11'}
+          />
         </Grid>
-        <Grid
-          container
-          sx={{
-            width: '232px',
-            bgcolor: '#f57224',
-            alignItems: 'center',
-          }}
-        >
-          <Typography sx={{ width: '100%', textAlign: 'center' }}>
-            เพิ่มลงรถเข็น
-          </Typography>
+        <Grid xs sx={{ ml: 1.5 }}>
+          <ProductActionButton
+            bgColor={'#f57224'}
+            text={'เพิ่มลงรถเข็น'}
+            hoverBgColor={'#d0611e'}
+          />
         </Grid>
       </Grid>
     </Grid>
