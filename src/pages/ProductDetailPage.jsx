@@ -6,6 +6,7 @@ import { Container } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
 import Loading from '../components/Loading'
 import ProductDetailHeader from '../components/productDetail/productDetailHeader/ProductDetailHeader'
+import ProductDetailDescription from '../components/productDetail/productDetailDescription/ProductDetailDescription'
 
 const ProductDetailPage = () => {
   const { id } = useParams()
@@ -21,6 +22,9 @@ const ProductDetailPage = () => {
       <Grid container>
         <Grid xs={12}>
           <ProductDetailHeader product={productDetail} />
+        </Grid>
+        <Grid xs={12} sx={{ mt: 2 }}>
+          <ProductDetailDescription product={productDetail} />
         </Grid>
       </Grid>
     </Container>
