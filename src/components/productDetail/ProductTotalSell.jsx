@@ -5,8 +5,6 @@ import ProductStock from './ProductStock'
 import ProductTotalCount from './ProductTotalCount'
 
 const ProductTotalSell = ({ stock }) => {
-  if (stock) {
-  }
   return (
     <Grid container sx={{ alignItems: 'center' }}>
       <Grid>
