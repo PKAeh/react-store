@@ -5,7 +5,7 @@ import useProductDetail from '../hooks/useProductDetail'
 import { Container } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
 import Loading from '../components/Loading'
-import ProductDetailHeader from '../components/productDetail/ProductDetailHeader'
+import ProductDetailHeader from '../components/productDetail/productDetailHeader/ProductDetailHeader'
 
 const ProductDetailPage = () => {
   const { id } = useParams()

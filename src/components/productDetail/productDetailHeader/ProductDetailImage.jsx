@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import ProductImageItem from '../product/ProductImageItem'
+import ProductImageItem from '../../product/ProductImageItem'
 
 import Grid from '@mui/material/Unstable_Grid2'
-import ImageCover from '../product/ImageCover'
+import ImageCover from '../../product/ImageCover'
 import Box from '@mui/material/Box'
 
 const ProductDetailImage = ({ product: { thumbnail, images } }) => {
