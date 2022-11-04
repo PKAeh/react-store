@@ -6,7 +6,7 @@ import ProductRatingComments from './ProductRatingComments'
 
 const ProductDetailComments = ({ product: { title, rating } }) => {
   return (
-    <Paper sx={{ py: 4 }}>
+    <Paper sx={{ py: 4, pb: 10 }}>
       <Grid container columns={1}>
         <Grid xs={1}>
           <Typography variant="h6" sx={{ pl: 6 }}>

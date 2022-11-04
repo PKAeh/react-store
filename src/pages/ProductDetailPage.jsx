@@ -8,6 +8,7 @@ import Loading from '../components/Loading'
 import ProductDetailHeader from '../components/productDetail/productDetailHeader/ProductDetailHeader'
 import ProductDetailDescription from '../components/productDetail/productDetailDescription/ProductDetailDescription'
 import ProductDetailComments from '../components/productDetail/productDetailComments/ProductDetailComments'
+import ProductQuestions from '../components/productDetail/productQuestions/ProductQuestions'
 
 const ProductDetailPage = () => {
   const { id } = useParams()
@@ -19,7 +20,7 @@ const ProductDetailPage = () => {
   }
 
   return (
-    <Container>
+    <Container sx={{ mb: 10 }}>
       <Grid container>
         <Grid xs={12}>
           <ProductDetailHeader product={productDetail} />
@@ -29,6 +30,9 @@ const ProductDetailPage = () => {
         </Grid>
         <Grid xs={12} sx={{ mt: 2 }}>
           <ProductDetailComments product={productDetail} />
+        </Grid>
+        <Grid xs={12} sx={{ mt: 2 }}>
+          <ProductQuestions />
         </Grid>
       </Grid>
     </Container>
