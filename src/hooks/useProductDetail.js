@@ -7,7 +7,7 @@ const useProductDetail = (id) => {
     isLoading: productDetailLoading,
     data: productDetail,
     error: productDetailError,
-  } = useQuery(['productDetail'], getProductDetail(id))
+  } = useQuery([`productDetail_${id}`], getProductDetail(id))
 
   return {
     productDetailLoading,
