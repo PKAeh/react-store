@@ -30,7 +30,7 @@ const CategoryItem = ({ item }) => {
           <Box
             sx={{
               backgroundImage: 'url(https://via.placeholder.com/140)',
-              width: '80%',
+              width: '98%',
               height: '140px',
               backgroundSize: 'cover',
               m: 0,
