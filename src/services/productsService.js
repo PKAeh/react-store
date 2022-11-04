@@ -1,5 +1,7 @@
-const getProductAll = () => {
-  return fetch('https://dummyjson.com/products').then((res) => res.json())
+const getProductAll = (skip, limit) => () => {
+  return fetch(
+    `https://dummyjson.com/products?skip=${skip}&limit=${limit}`
+  ).then((res) => res.json())
 }
 
 const getCategoriesAll = () => {
