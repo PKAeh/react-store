@@ -20,7 +20,7 @@ const SearchPage = () => {
 
   const total = productSearch?.total ?? 0
 
-  const count = total / 20
+  const count = Math.ceil(total / 20)
 
   const handleChange = (event, value) => {
     setPage(value)

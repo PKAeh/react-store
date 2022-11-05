@@ -15,7 +15,7 @@ const ProductAllPage = () => {
 
   const total = products?.total ?? 0
 
-  const count = total / 20
+  const count = Math.ceil(total / 20)
 
   const handleChange = (event, value) => {
     setPage(value)
