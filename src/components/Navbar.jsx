@@ -79,7 +79,7 @@ function Navbar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/react-store/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
