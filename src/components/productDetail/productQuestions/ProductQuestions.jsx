@@ -20,10 +20,12 @@ const ProductQuestions = () => {
           <LiveHelpOutlinedIcon color="disabled" sx={{ fontSize: 80 }} />
         </Grid>
         <Grid xs={1} sx={{ textAlign: 'center', mt: 1.5 }}>
-          <Typography>ยังไม่มีคำถาม</Typography>
+          <Typography sx={{ color: 'rgba(0,0,0,0.6)' }}>
+            ยังไม่มีคำถาม
+          </Typography>
         </Grid>
         <Grid xs={1} sx={{ textAlign: 'center' }}>
-          <Typography>
+          <Typography sx={{ color: 'rgba(0,0,0,0.6)' }}>
             <Link
               sx={{
                 textDecoration: 'none',
