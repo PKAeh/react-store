@@ -29,8 +29,8 @@ const PaperChip = ({ image, title }) => {
         cursor: 'pointer',
       }}
     >
-      <img src={image} alt="logo" width={25} />
-      <Typography sx={{ fontWeight: 'bold' }} variant="body2">
+      <img src={image} alt="logo" width={30} />
+      <Typography sx={{ fontWeight: 'bold', pt: 0.5 }} variant="body2">
         {title}
       </Typography>
     </Paper>
