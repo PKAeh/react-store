@@ -29,7 +29,7 @@ const ProductQuestions = () => {
                 textDecoration: 'none',
                 ':hover': { textDecoration: 'underline', color: '#16849b' },
               }}
-              href="/#"
+              href="/react-store/"
             >
               เข้าสู่ระบบ
             </Link>{' '}
@@ -39,7 +39,7 @@ const ProductQuestions = () => {
                 textDecoration: 'none',
                 ':hover': { textDecoration: 'underline', color: '#16849b' },
               }}
-              href="/#"
+              href="/react-store/"
             >
               สมัครสมาชิก
             </Link>{' '}
