@@ -9,7 +9,11 @@ import RemoveModeratorOutlinedIcon from '@mui/icons-material/RemoveModeratorOutl
 
 const ProductDetailShipping = () => {
   return (
-    <Grid container columns={1} sx={{ pl: 2, backgroundColor: '#fafafa' }}>
+    <Grid
+      container
+      columns={1}
+      sx={{ pl: 2, backgroundColor: '#fafafa', pb: 5 }}
+    >
       <Grid xs={1} sx={{ pt: 1.2, pb: 0.8 }}>
         <Typography variant="caption" sx={{ color: 'rgba(0,0,0,0.5)' }}>
           ตัวเลือกการจัดส่ง
