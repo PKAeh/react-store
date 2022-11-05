@@ -9,7 +9,7 @@ import ProductHeader from '../components/product/ProductHeader'
 import Paper from '@mui/material/Paper'
 import ProductContent from '../components/product/ProductContent'
 import Pagination from '@mui/material/Pagination'
-
+import ErrorPage from './ErrorPage'
 const SearchPage = () => {
   const [page, setPage] = React.useState(1)
   const { search } = useLocation()
@@ -31,7 +31,9 @@ const SearchPage = () => {
     return <Loading />
   }
 
-  console.log(productSearch)
+  if (productSearchError) {
+    return <ErrorPage />
+  }
 
   return (
     <Paper sx={{ pb: 15 }}>

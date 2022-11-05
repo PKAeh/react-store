@@ -7,6 +7,7 @@ import Loading from '../components/Loading'
 import ProductAllHeader from '../components/productAll/ProductAllHeader'
 import ProductAllContent from '../components/productAll/ProductAllContent'
 import Pagination from '@mui/material/Pagination'
+import ErrorPage from './ErrorPage'
 
 const ProductAllPage = () => {
   const [page, setPage] = React.useState(1)
@@ -23,6 +24,10 @@ const ProductAllPage = () => {
 
   if (productsLoading) {
     return <Loading />
+  }
+
+  if (productsError) {
+    return <ErrorPage />
   }
 
   return (

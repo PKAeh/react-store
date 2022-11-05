@@ -8,6 +8,7 @@ import ChipList from '../components/ChipList'
 import Loading from '../components/Loading'
 import FlashSale from '../components/flashSales/FlashSale'
 import Categories from '../components/categories/Categories'
+import ErrorPage from './ErrorPage'
 
 const HomePage = () => {
   const { productsLoading, products, productsError } = useProductsAll()
@@ -15,6 +16,10 @@ const HomePage = () => {
 
   if (productsLoading || categoriesLoading) {
     return <Loading />
+  }
+
+  if (productsError || categoriesError) {
+    return <ErrorPage />
   }
 
   return (

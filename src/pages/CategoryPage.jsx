@@ -8,6 +8,7 @@ import Loading from '../components/Loading'
 import ProductHeader from '../components/product/ProductHeader'
 import Paper from '@mui/material/Paper'
 import ProductContent from '../components/product/ProductContent'
+import ErrorPage from './ErrorPage'
 
 const CategoryPage = () => {
   const { category } = useParams()
@@ -16,6 +17,10 @@ const CategoryPage = () => {
 
   if (productCategoryLoading) {
     return <Loading />
+  }
+
+  if (productCategoryError) {
+    return <ErrorPage />
   }
 
   return (

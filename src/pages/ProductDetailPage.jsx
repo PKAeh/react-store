@@ -9,6 +9,7 @@ import ProductDetailHeader from '../components/productDetail/productDetailHeader
 import ProductDetailDescription from '../components/productDetail/productDetailDescription/ProductDetailDescription'
 import ProductDetailComments from '../components/productDetail/productDetailComments/ProductDetailComments'
 import ProductQuestions from '../components/productDetail/productQuestions/ProductQuestions'
+import ErrorPage from './ErrorPage'
 
 const ProductDetailPage = () => {
   const { id } = useParams()
@@ -17,6 +18,10 @@ const ProductDetailPage = () => {
 
   if (productDetailLoading) {
     return <Loading />
+  }
+
+  if (productDetailError) {
+    return <ErrorPage />
   }
 
   return (
